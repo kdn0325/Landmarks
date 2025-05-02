@@ -10,9 +10,11 @@ import SwiftUI
 //  @main속성은 앱의 진입점을 식별
 @main
 struct LandmarksApp: App {
+    @State private var modelData = ModelData()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(modelData)
         }
     }
 }
